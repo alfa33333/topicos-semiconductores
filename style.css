@@ -1,0 +1,11 @@
+ ol.nested-list {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  ol.nested-list li {
+    counter-increment: item;
+  }
+  ol.nested-list li::before {
+    content: counters(item, ".") ". ";
+  }
